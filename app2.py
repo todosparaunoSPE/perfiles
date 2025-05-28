@@ -12,18 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Botón para descargar manual PDF
-with open("perfiles.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-    
-st.download_button(
-        label="📄 Descargar Manual",
-        data=PDFbyte,
-        file_name="perfiles.pdf",
-        mime="application/pdf",
-        help="Descargue el manual de usuario en formato PDF"
-)
-st.markdown("---")
+
 
 # -----------------------------
 # SIMULACIÓN DE DATOS Y MODELO IA
@@ -74,6 +63,20 @@ st.title("SECRETARÍA DE SEGURIDAD Y PROTECCIÓN CIUDADANA:  🧠 Generador de P
 st.markdown("""
 Esta herramienta simula perfiles criminológicos con apoyo de Inteligencia Artificial, análisis psicológico y cuestionarios interactivos.
 """)
+
+
+# Botón para descargar manual PDF
+with open("perfiles.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+    
+st.download_button(
+        label="📄 Descargar Manual",
+        data=PDFbyte,
+        file_name="perfiles.pdf",
+        mime="application/pdf",
+        help="Descargue el manual de usuario en formato PDF"
+)
+st.markdown("---")
 
 # Entradas del usuario
 st.header("🔍 Simulación de Caso")
