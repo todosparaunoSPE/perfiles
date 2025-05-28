@@ -66,17 +66,22 @@ Esta herramienta simula perfiles criminológicos con apoyo de Inteligencia Artif
 
 
 # Botón para descargar manual PDF
-with open("perfiles.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-    
-st.download_button(
+try:
+    with open("perfiles.pdf", "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+
+    st.download_button(
         label="📄 Descargar Manual",
         data=PDFbyte,
         file_name="perfiles.pdf",
         mime="application/pdf",
         help="Descargue el manual de usuario en formato PDF"
-)
+    )
+except FileNotFoundError:
+    st.error("El archivo 'perfiles.pdf' no fue encontrado en el directorio del script.")
+
 st.markdown("---")
+
 
 # Entradas del usuario
 st.header("🔍 Simulación de Caso")
