@@ -12,18 +12,18 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 
- # Botón para descargar manual PDF
-    with open("perfiles.pdf", "rb") as pdf_file:
-        PDFbyte = pdf_file.read()
+# Botón para descargar manual PDF
+with open("perfiles.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
     
-    st.download_button(
+st.download_button(
         label="📄 Descargar Manual",
         data=PDFbyte,
         file_name="perfiles.pdf",
         mime="application/pdf",
         help="Descargue el manual de usuario en formato PDF"
-    )
-    st.markdown("---")
+)
+st.markdown("---")
 
 # -----------------------------
 # SIMULACIÓN DE DATOS Y MODELO IA
