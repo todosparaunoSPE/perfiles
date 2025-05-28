@@ -12,13 +12,6 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#st.set_page_config(page_title="Perfil Criminológico IA", layout="centered")
-st.set_page_config(page_title="Perfil Criminológico IA", layout="centered")
-st.title("SECRETARÍA DE SEGURIDAD Y PROTECCIÓN CIUDADANA:  🧠 Generador de Perfiles Criminológicos con IA")
-st.markdown("""
-Esta herramienta simula perfiles criminológicos con apoyo de Inteligencia Artificial, análisis psicológico y cuestionarios interactivos.
-""")
-
 # -----------------------------
 # SIMULACIÓN DE DATOS Y MODELO IA
 # -----------------------------
@@ -63,6 +56,11 @@ perfil_map = dict(enumerate(df_ml['Perfil generado'].astype('category').cat.cate
 # -----------------------------
 # INTERFAZ STREAMLIT
 # -----------------------------
+st.set_page_config(page_title="Perfil Criminológico IA", layout="centered")
+st.title("SECRETARÍA DE SEGURIDAD Y PROTECCIÓN CIUDADANA:  🧠 Generador de Perfiles Criminológicos con IA")
+st.markdown("""
+Esta herramienta simula perfiles criminológicos con apoyo de Inteligencia Artificial, análisis psicológico y cuestionarios interactivos.
+""")
 
 # Entradas del usuario
 st.header("🔍 Simulación de Caso")
