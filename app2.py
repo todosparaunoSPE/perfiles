@@ -171,3 +171,18 @@ st.markdown("""
 📱 +52 56 1056 4095  
 🔗 [LinkedIn](https://www.linkedin.com/in/javier-horacio-perez-ricardez-5b3a5777/)
 """)
+
+# -------- Botón de descarga de PDF en el sidebar --------
+with st.sidebar:
+    st.markdown("### 📥 Descargar Informe PDF")
+    try:
+        with open("perfiles.pdf", "rb") as pdf_file:
+            pdf_bytes = pdf_file.read()
+            st.download_button(
+                label="Descargar perfiles.pdf",
+                data=pdf_bytes,
+                file_name="perfiles.pdf",
+                mime="application/pdf"
+            )
+    except FileNotFoundError:
+        st.error("El archivo perfiles.pdf no se encontró en el directorio.")
