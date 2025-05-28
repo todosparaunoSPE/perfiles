@@ -19,26 +19,6 @@ st.markdown("""
 Esta herramienta simula perfiles criminológicos con apoyo de Inteligencia Artificial, análisis psicológico y cuestionarios interactivos.
 """)
 
-# Botón para descargar manual PDF
-try:
-    with open("perfiles.pdf", "rb") as pdf_file:
-        PDFbyte = pdf_file.read()
-
-    st.download_button(
-        label="📄 Descargar Manual",
-        data=PDFbyte,
-        file_name="perfiles.pdf",
-        mime="application/pdf",
-        help="Descargue el manual de usuario en formato PDF"
-    )
-except FileNotFoundError:
-    st.error("El archivo 'perfiles.pdf' no fue encontrado en el directorio del script.")
-
-st.markdown("---")
-
-
-
-
 # -----------------------------
 # SIMULACIÓN DE DATOS Y MODELO IA
 # -----------------------------
